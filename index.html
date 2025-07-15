@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Coups d'État en Afrique</title>
+
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- 🔍 Filtres + Graphique -->
+<div id="filter-box">
+  <label for="regionSelect">Filtrer par région :</label><br>
+  <select id="regionSelect">
+    <option value="all">🌍 Toutes les régions</option>
+    <option value="nord">nord</option>
+    <option value="ouest">ouest</option>
+    <option value="centre">centre</option>
+    <option value="est">est</option>
+    <option value="australe">australe</option>
+  </select><br>
+
+  <label for="countryInput">Rechercher un pays :</label><br>
+  <input type="text" id="countryInput" placeholder="🔍 Nom du pays..." />
+
+  <!-- 📊 Graphique -->
+  <div id="chart-container">
+    <canvas id="chartRegion"></canvas>
+  </div>
+</div>
+
+<!-- 🗺️ Carte -->
+<div id="map"></div>
+
+<!-- 📌 Légende -->
+<div id="legend">
+  <h4>Nombre de coups d'État</h4>
+  <i style="background:#800026"></i> 12+<br>
+  <i style="background:#BD0026"></i> 7 – 11<br>
+  <i style="background:#FD8D3C"></i> 3 – 6<br>
+  <i style="background:#FFEDA0"></i> 0 – 2
+</div>
+
+<!-- 📜 Scripts -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
